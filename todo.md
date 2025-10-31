@@ -33,3 +33,12 @@
 - [x] Ken scores toe aan partijen per thema op beide assen
 - [x] Automatische kleurberekening op basis van politieke positie
 - [x] Voeg uitgebreide legenda toe die de politieke kleur van de kamer uitlegt
+
+## UI verbeteringen
+
+- [x] Maak coalitie samenvatting prominenter en groter
+- [x] Verplaats kleurenuitleg naar inklapbare foldout
+- [x] Voeg groene kleuren toe aan kleurenschema
+- [x] Verander themaselector naar pill-shaped knoppen
+- [x] Verwijder fixed positioning van titel
+- [x] Voeg "Waarop is dit gebaseerd?" link toe met popup uitleg

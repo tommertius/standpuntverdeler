@@ -26,14 +26,17 @@ export function calculatePoliticalColor(
   const saturation = 85 - (pc * 30); // 85% (progressief) tot 55% (conservatief)
   
   // Bereken hue op basis van links-rechts
-  // Rood (0°) → Paars (300°) → Blauw (240°)
+  // Groen (120°) → Rood (0°) → Paars (300°) → Blauw (240°)
   let hue: number;
-  if (lr < 0.5) {
-    // Links naar centrum: rood (0°) naar paars (300°)
-    hue = 0 + (lr * 2 * 300);
+  if (lr < 0.33) {
+    // Zeer links: groen (120°) naar rood (0°)
+    hue = 120 - (lr * 3 * 120);
+  } else if (lr < 0.67) {
+    // Centrum: rood (0°) naar paars (300°)
+    hue = 0 + ((lr - 0.33) * 3 * 300);
   } else {
-    // Centrum naar rechts: paars (300°) naar blauw (240°)
-    hue = 300 - ((lr - 0.5) * 2 * 60);
+    // Rechts: paars (300°) naar blauw (240°)
+    hue = 300 - ((lr - 0.67) * 3 * 60);
   }
   
   return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
@@ -87,13 +90,16 @@ export function describePoliticalPosition(
 /**
  * Geef een kleur voor de legenda-indicator
  */
-export function getLegendColor(position: 'links' | 'centrum' | 'rechts', shade: 'licht' | 'donker'): string {
+export function getLegendColor(position: 'zeer_links' | 'links' | 'centrum' | 'rechts', shade: 'licht' | 'donker'): string {
   const isLight = shade === 'licht';
   const lightness = isLight ? 65 : 35;
   const saturation = isLight ? 85 : 55;
   
   let hue: number;
   switch (position) {
+    case 'zeer_links':
+      hue = 120; // Groen
+      break;
     case 'links':
       hue = 0; // Rood
       break;

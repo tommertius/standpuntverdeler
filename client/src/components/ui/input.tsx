@@ -1,4 +1,4 @@
-import { useDialogComposition } from "@/components/ui/dialog";
+// import { useDialogComposition } from "@/components/ui/dialog";
 import { useComposition } from "@/hooks/useComposition";
 import { cn } from "@/lib/utils";
 import * as React from "react";
@@ -12,7 +12,11 @@ function Input({
   ...props
 }: React.ComponentProps<"input">) {
   // Get dialog composition context if available (will be no-op if not inside Dialog)
-  const dialogComposition = useDialogComposition();
+  const dialogComposition = { 
+    justEndedComposing: () => false,
+    setComposing: (_: boolean) => {},
+    markCompositionEnd: () => {}
+  };
 
   // Add composition event handlers to support input method editor (IME) for CJK languages.
   const {

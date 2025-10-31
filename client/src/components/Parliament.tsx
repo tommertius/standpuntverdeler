@@ -1,5 +1,7 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { calculatePoliticalColor, calculateCoalitionPosition, describePoliticalPosition, getLegendColor } from '@/lib/colorUtils';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { ChevronDown } from 'lucide-react';
 
 interface Seat {
   x: number;
@@ -16,6 +18,8 @@ interface ParliamentProps {
 }
 
 export default function Parliament({ selectedParties, partiesData, selectedTheme }: ParliamentProps) {
+  const [isLegendOpen, setIsLegendOpen] = useState(false);
+
   const seats = useMemo(() => {
     // Genereer 150 zetels in een halve boog
     const totalSeats = 150;
@@ -136,7 +140,7 @@ export default function Parliament({ selectedParties, partiesData, selectedTheme
   }, [selectedParties, partiesData, selectedTheme]);
 
   return (
-    <div className="w-full space-y-4">
+    <div className="w-full space-y-6">
       {/* Zetelteller */}
       <div className="text-center">
         <p className="text-sm text-muted-foreground">
@@ -183,6 +187,20 @@ export default function Parliament({ selectedParties, partiesData, selectedTheme
         </svg>
       </div>
 
+      {/* PROMINENTE Coalitie samenvatting */}
+      {coalitionPosition && legend.length > 0 && (
+        <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-6 border-2 border-primary/20">
+          <p className="text-center text-xl md:text-2xl font-serif">
+            <span className="text-muted-foreground">Deze coalitie is: </span>
+            <span className="font-bold text-foreground">
+              {describePoliticalPosition(coalitionPosition.linksRechts, coalitionPosition.progressiefConservatief)}
+            </span>
+            <span className="text-muted-foreground"> op het thema </span>
+            <span className="font-semibold text-foreground">{partiesData?.themas[selectedTheme]?.naam.toLowerCase()}</span>
+          </p>
+        </div>
+      )}
+
       {/* Legenda en uitleg */}
       {legend.length > 0 && (
         <div className="border-t pt-4 space-y-4">
@@ -205,60 +223,58 @@ export default function Parliament({ selectedParties, partiesData, selectedTheme
             </div>
           </div>
 
-          {/* Kleurenschema uitleg */}
-          <div className="bg-muted/30 rounded-lg p-4 space-y-3">
-            <h4 className="text-sm font-semibold">Wat betekenen deze kleuren?</h4>
-            <p className="text-xs text-muted-foreground">
-              De kleuren tonen de politieke positie van elke partij op het thema <strong>{partiesData?.themas[selectedTheme]?.naam}</strong>
-            </p>
-            
-            <div className="grid grid-cols-2 gap-3 text-xs">
-              <div>
-                <p className="font-medium mb-2">Links ↔ Rechts</p>
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getLegendColor('links', 'licht') }} />
-                    <span>Links (sociaal, herverdeling)</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getLegendColor('centrum', 'licht') }} />
-                    <span>Centrum (gematigd)</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getLegendColor('rechts', 'licht') }} />
-                    <span>Rechts (liberaal, markt)</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div>
-                <p className="font-medium mb-2">Progressief ↔ Conservatief</p>
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getLegendColor('centrum', 'licht') }} />
-                    <span>Progressief (lichte kleuren)</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getLegendColor('centrum', 'donker') }} />
-                    <span>Conservatief (donkere kleuren)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Coalitie samenvatting */}
-            {coalitionPosition && (
-              <div className="pt-3 border-t border-border/50">
-                <p className="text-sm">
-                  <span className="font-semibold">Deze coalitie is: </span>
-                  <span className="text-foreground">
-                    {describePoliticalPosition(coalitionPosition.linksRechts, coalitionPosition.progressiefConservatief)}
-                  </span>
-                  <span className="text-muted-foreground"> op het thema {partiesData?.themas[selectedTheme]?.naam.toLowerCase()}</span>
+          {/* Inklapbare kleurenschema uitleg */}
+          <Collapsible open={isLegendOpen} onOpenChange={setIsLegendOpen}>
+            <CollapsibleTrigger className="flex items-center gap-2 text-sm font-medium hover:underline">
+              <span>Wat betekenen deze kleuren?</span>
+              <ChevronDown className={`h-4 w-4 transition-transform ${isLegendOpen ? 'rotate-180' : ''}`} />
+            </CollapsibleTrigger>
+            <CollapsibleContent className="mt-3">
+              <div className="bg-muted/30 rounded-lg p-4 space-y-3">
+                <p className="text-xs text-muted-foreground">
+                  De kleuren tonen de politieke positie van elke partij op het thema <strong>{partiesData?.themas[selectedTheme]?.naam}</strong>
                 </p>
+                
+                <div className="grid grid-cols-2 gap-3 text-xs">
+                  <div>
+                    <p className="font-medium mb-2">Links ↔ Rechts</p>
+                    <div className="space-y-1">
+                      <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getLegendColor('zeer_links', 'licht') }} />
+                        <span>Zeer links (groen)</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getLegendColor('links', 'licht') }} />
+                        <span>Links (rood)</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getLegendColor('centrum', 'licht') }} />
+                        <span>Centrum (paars)</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getLegendColor('rechts', 'licht') }} />
+                        <span>Rechts (blauw)</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <p className="font-medium mb-2">Progressief ↔ Conservatief</p>
+                    <div className="space-y-1">
+                      <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getLegendColor('centrum', 'licht') }} />
+                        <span>Progressief (lichte kleuren)</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getLegendColor('centrum', 'donker') }} />
+                        <span>Conservatief (donkere kleuren)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            )}
-          </div>
+            </CollapsibleContent>
+          </Collapsible>
         </div>
       )}
     </div>
