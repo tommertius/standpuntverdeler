@@ -63,7 +63,7 @@ export default function Home() {
           {/* Methodologie link */}
           <div className="text-center mt-3">
             <Dialog>
-              <DialogTrigger className="text-sm text-primary hover:underline">
+              <DialogTrigger className="text-sm text-foreground underline hover:opacity-70">
                 Waarop is dit gebaseerd?
               </DialogTrigger>
               <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">

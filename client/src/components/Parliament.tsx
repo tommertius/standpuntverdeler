@@ -189,7 +189,7 @@ export default function Parliament({ selectedParties, partiesData, selectedTheme
 
       {/* PROMINENTE Coalitie samenvatting */}
       {coalitionPosition && legend.length > 0 && (
-        <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-6 border-2 border-primary/20">
+        <div className="py-6">
           <p className="text-center text-xl md:text-2xl font-serif">
             <span className="text-muted-foreground">Deze coalitie is: </span>
             <span className="font-bold text-foreground">

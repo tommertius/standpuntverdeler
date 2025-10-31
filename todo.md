@@ -42,3 +42,11 @@
 - [x] Verander themaselector naar pill-shaped knoppen
 - [x] Verwijder fixed positioning van titel
 - [x] Voeg "Waarop is dit gebaseerd?" link toe met popup uitleg
+
+## Laatste verfijningen
+
+- [x] Verwijder blauwe box achter coalitie samenvatting
+- [x] Zorg dat kleuren bij standpunten overeenkomen met coalitie kleuren
+- [x] Maak quotes mooier met minder kleurnadruk
+- [x] Pas popup animatie aan naar scale vanuit midden
+- [x] Maak link bovenin zwart en underlined

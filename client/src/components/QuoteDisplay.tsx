@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { calculatePoliticalColor } from '@/lib/colorUtils';
 
 interface QuoteDisplayProps {
   partiesData: any;
@@ -28,23 +29,29 @@ export default function QuoteDisplay({ partiesData, selectedParties, selectedThe
         {selectedPartiesData.map(([key, party]: [string, any]) => {
           const standpunt = party.standpunten[selectedTheme];
           
+          // Bereken de kleur op basis van politieke positie (zelfde als in Parliament)
+          const color = calculatePoliticalColor(
+            standpunt.linksRechts || 0,
+            standpunt.progressiefConservatief || 0
+          );
+          
           return (
-            <Card key={key} className="border-2" style={{ borderColor: standpunt.kleur }}>
+            <Card key={key} className="border hover:shadow-md transition-shadow">
               <CardHeader className="pb-3">
-                <CardTitle className="text-base flex items-center justify-between">
-                  <span>{party.naam}</span>
+                <CardTitle className="text-base flex items-center gap-3">
                   <span 
-                    className="w-4 h-4 rounded-full border border-foreground/20"
-                    style={{ backgroundColor: standpunt.kleur }}
+                    className="w-3 h-3 rounded-full flex-shrink-0"
+                    style={{ backgroundColor: color }}
                   />
+                  <span className="font-semibold">{party.naam}</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-2">
-                <p className="text-sm font-medium text-muted-foreground">
+              <CardContent className="space-y-3">
+                <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
                   {standpunt.positie}
                 </p>
-                <blockquote className="text-sm italic border-l-4 pl-3 py-1" style={{ borderColor: standpunt.kleur }}>
-                  "{standpunt.quote}"
+                <blockquote className="text-base leading-relaxed border-l-2 border-muted pl-4 py-2">
+                  <span className="text-foreground/90 italic">"{standpunt.quote}"</span>
                 </blockquote>
               </CardContent>
             </Card>
