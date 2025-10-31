@@ -35,37 +35,49 @@
           "kleur": "#8B4513",
           "kleur_naam": "Bruin (restrictief)",
           "positie": "Restrictief - focus op Nederlanders eerst",
-          "quote": "Voorrang voor Nederlanders bij sociale huurwoningen, stop met azc's die woningen innemen"
+          "quote": "Voorrang voor Nederlanders bij sociale huurwoningen, stop met azc's die woningen innemen",
+          "linksRechts": 3,
+          "progressiefConservatief": 7
         },
         "zorg": {
           "kleur": "#DC143C",
           "kleur_naam": "Rood (sociaal)",
           "positie": "Sociaal - meer zorg voor ouderen",
-          "quote": "Afschaffen eigen risico, meer geld voor ouderenzorg en ziekenhuizen"
+          "quote": "Afschaffen eigen risico, meer geld voor ouderenzorg en ziekenhuizen",
+          "linksRechts": -4,
+          "progressiefConservatief": 4
         },
         "migratie": {
           "kleur": "#8B0000",
           "kleur_naam": "Donkerrood (zeer restrictief)",
           "positie": "Zeer restrictief - grenzen dicht",
-          "quote": "Azc-stop, grenzen dicht, asielzoekers terugsturen, Nederland uit de EU"
+          "quote": "Azc-stop, grenzen dicht, asielzoekers terugsturen, Nederland uit de EU",
+          "linksRechts": 8,
+          "progressiefConservatief": 9
         },
         "belastingen": {
           "kleur": "#FF6347",
           "kleur_naam": "Tomaatrood (lastenverlichting)",
           "positie": "Lastenverlichting voor burgers",
-          "quote": "Verlaging inkomstenbelasting, afschaffing btw op boodschappen en energie"
+          "quote": "Verlaging inkomstenbelasting, afschaffing btw op boodschappen en energie",
+          "linksRechts": -2,
+          "progressiefConservatief": 2
         },
         "samenleving_inclusie": {
           "kleur": "#4169E1",
           "kleur_naam": "Blauw (conservatief)",
           "positie": "Conservatief - Nederlandse waarden centraal",
-          "quote": "Bescherming Nederlandse cultuur, stop met woke-beleid en identiteitspolitiek"
+          "quote": "Bescherming Nederlandse cultuur, stop met woke-beleid en identiteitspolitiek",
+          "linksRechts": 7,
+          "progressiefConservatief": 9
         },
         "financiering": {
           "kleur": "#FF8C00",
           "kleur_naam": "Oranje (bezuinigen op ontwikkelingshulp)",
           "positie": "Bezuinigen op ontwikkelingshulp en EU",
-          "quote": "Miljarden besparen door uit de EU te stappen en ontwikkelingshulp te schrappen"
+          "quote": "Miljarden besparen door uit de EU te stappen en ontwikkelingshulp te schrappen",
+          "linksRechts": 5,
+          "progressiefConservatief": 6
         }
       }
     },
@@ -78,37 +90,49 @@
           "kleur": "#32CD32",
           "kleur_naam": "Groen (progressief bouwen)",
           "positie": "Progressief - meer bouwen en verduurzamen",
-          "quote": "100.000 extra woningen per jaar, verduurzaming huurwoningen, betere bescherming huurders"
+          "quote": "100.000 extra woningen per jaar, verduurzaming huurwoningen, betere bescherming huurders",
+          "linksRechts": -3,
+          "progressiefConservatief": -6
         },
         "zorg": {
           "kleur": "#1E90FF",
           "kleur_naam": "Blauw (modernisering)",
           "positie": "Modernisering en preventie",
-          "quote": "Investeren in preventie, modernisering zorg, verlaging eigen risico naar €165"
+          "quote": "Investeren in preventie, modernisering zorg, verlaging eigen risico naar €165",
+          "linksRechts": 0,
+          "progressiefConservatief": -4
         },
         "migratie": {
           "kleur": "#FFD700",
           "kleur_naam": "Goud (humaan en Europees)",
           "positie": "Humaan en Europees",
-          "quote": "Eerlijke asielp rocedures, Europese samenwerking, arbeidsmigratie voor tekorten"
+          "quote": "Eerlijke asielp rocedures, Europese samenwerking, arbeidsmigratie voor tekorten",
+          "linksRechts": -2,
+          "progressiefConservatief": -5
         },
         "belastingen": {
           "kleur": "#9370DB",
           "kleur_naam": "Paars (progressief)",
           "positie": "Progressief - vermogen belasten",
-          "quote": "Vermogensbelasting invoeren, box 3 hervormen, lagere lasten op arbeid"
+          "quote": "Vermogensbelasting invoeren, box 3 hervormen, lagere lasten op arbeid",
+          "linksRechts": -4,
+          "progressiefConservatief": -3
         },
         "samenleving_inclusie": {
           "kleur": "#FF1493",
           "kleur_naam": "Roze (zeer progressief)",
           "positie": "Zeer progressief - gelijke rechten",
-          "quote": "Volledige gelijkheid LGBTQ+, antiracisme beleid, bescherming minderheden"
+          "quote": "Volledige gelijkheid LGBTQ+, antiracisme beleid, bescherming minderheden",
+          "linksRechts": -5,
+          "progressiefConservatief": -8
         },
         "financiering": {
           "kleur": "#228B22",
           "kleur_naam": "Bosgroen (groene investeringen)",
           "positie": "Investeren in klimaat en onderwijs",
-          "quote": "Investeringen in klimaat, onderwijs en innovatie, hogere belastingen op vermogen"
+          "quote": "Investeringen in klimaat, onderwijs en innovatie, hogere belastingen op vermogen",
+          "linksRechts": -2,
+          "progressiefConservatief": -4
         }
       }
     },
@@ -121,37 +145,49 @@
           "kleur": "#4169E1",
           "kleur_naam": "Blauw (marktwerking)",
           "positie": "Marktwerking - meer bouwen via private sector",
-          "quote": "Versnellen woningbouw, minder regels, meer ruimte voor markt en particulieren"
+          "quote": "Versnellen woningbouw, minder regels, meer ruimte voor markt en particulieren",
+          "linksRechts": 6,
+          "progressiefConservatief": 0
         },
         "zorg": {
           "kleur": "#87CEEB",
           "kleur_naam": "Lichtblauw (marktgericht)",
           "positie": "Marktgericht - eigen verantwoordelijkheid",
-          "quote": "Behoud zorgverzekeringsstelsel, meer concurrentie, eigen verantwoordelijkheid"
+          "quote": "Behoud zorgverzekeringsstelsel, meer concurrentie, eigen verantwoordelijkheid",
+          "linksRechts": 5,
+          "progressiefConservatief": 1
         },
         "migratie": {
           "kleur": "#FF8C00",
           "kleur_naam": "Oranje (streng maar rechtvaardig)",
           "positie": "Streng maar rechtvaardig",
-          "quote": "Strenge asielregels, arbeidsmigratie voor economie, handhaving terugkeer"
+          "quote": "Strenge asielregels, arbeidsmigratie voor economie, handhaving terugkeer",
+          "linksRechts": 6,
+          "progressiefConservatief": 5
         },
         "belastingen": {
           "kleur": "#4682B4",
           "kleur_naam": "Staalblauw (lastenverlichting)",
           "positie": "Lastenverlichting - lage belastingen",
-          "quote": "Verlaging inkomstenbelasting, behoud box 3, lagere belastingen op ondernemen"
+          "quote": "Verlaging inkomstenbelasting, behoud box 3, lagere belastingen op ondernemen",
+          "linksRechts": 7,
+          "progressiefConservatief": 2
         },
         "samenleving_inclusie": {
           "kleur": "#B0C4DE",
           "kleur_naam": "Lichtstaalblauw (liberaal)",
           "positie": "Liberaal - gelijke kansen",
-          "quote": "Gelijke kansen voor iedereen, geen quotum, integratie door werk"
+          "quote": "Gelijke kansen voor iedereen, geen quotum, integratie door werk",
+          "linksRechts": 3,
+          "progressiefConservatief": 0
         },
         "financiering": {
           "kleur": "#4169E1",
           "kleur_naam": "Koningsblauw (bezuinigen)",
           "positie": "Bezuinigen en lage schuld",
-          "quote": "Bezuinigen op overheid, lagere staatsschuld, geen extra belastingen"
+          "quote": "Bezuinigen op overheid, lagere staatsschuld, geen extra belastingen",
+          "linksRechts": 6,
+          "progressiefConservatief": 3
         }
       }
     },
@@ -164,37 +200,49 @@
           "kleur": "#DC143C",
           "kleur_naam": "Rood (sociaal)",
           "positie": "Sociaal - betaalbare woningen",
-          "quote": "Massale bouw sociale huurwoningen, huurprijsbevriezing, hardere aanpak huisjesmelkers"
+          "quote": "Massale bouw sociale huurwoningen, huurprijsbevriezing, hardere aanpak huisjesmelkers",
+          "linksRechts": -7,
+          "progressiefConservatief": -5
         },
         "zorg": {
           "kleur": "#FF1493",
           "kleur_naam": "Roze (publieke zorg)",
           "positie": "Publieke zorg - afschaffen marktwerking",
-          "quote": "Zorg uit de markt, afschaffen eigen risico, meer geld voor zorgpersoneel"
+          "quote": "Zorg uit de markt, afschaffen eigen risico, meer geld voor zorgpersoneel",
+          "linksRechts": -8,
+          "progressiefConservatief": -3
         },
         "migratie": {
           "kleur": "#FFD700",
           "kleur_naam": "Goud (humaan)",
           "positie": "Humaan - vluchtelingen welkom",
-          "quote": "Humaan asielbeleid, kinderpardon, betere opvang en integratie"
+          "quote": "Humaan asielbeleid, kinderpardon, betere opvang en integratie",
+          "linksRechts": -6,
+          "progressiefConservatief": -7
         },
         "belastingen": {
           "kleur": "#8B0000",
           "kleur_naam": "Donkerrood (progressief)",
           "positie": "Zeer progressief - rijken belasten",
-          "quote": "Vermogensbelasting, miljonairsbelasting, hogere belasting op winst en vermogen"
+          "quote": "Vermogensbelasting, miljonairsbelasting, hogere belasting op winst en vermogen",
+          "linksRechts": -8,
+          "progressiefConservatief": -4
         },
         "samenleving_inclusie": {
           "kleur": "#00FF00",
           "kleur_naam": "Groen (zeer progressief)",
           "positie": "Zeer progressief - antiracisme",
-          "quote": "Actief antiracisme beleid, volledige LGBTQ+ gelijkheid, diversiteitsquota"
+          "quote": "Actief antiracisme beleid, volledige LGBTQ+ gelijkheid, diversiteitsquota",
+          "linksRechts": -7,
+          "progressiefConservatief": -9
         },
         "financiering": {
           "kleur": "#228B22",
           "kleur_naam": "Bosgroen (groene investeringen)",
           "positie": "Investeren in klimaat en sociale voorzieningen",
-          "quote": "Grote investeringen in klimaat, zorg en onderwijs, betalen door rijken te belasten"
+          "quote": "Grote investeringen in klimaat, zorg en onderwijs, betalen door rijken te belasten",
+          "linksRechts": -7,
+          "progressiefConservatief": -5
         }
       }
     },
@@ -207,37 +255,49 @@
           "kleur": "#FF8C00",
           "kleur_naam": "Oranje (gematigd sociaal)",
           "positie": "Gematigd sociaal - betaalbaar voor starters",
-          "quote": "Meer betaalbare woningen voor starters en gezinnen, stimuleren zelfbouw"
+          "quote": "Meer betaalbare woningen voor starters en gezinnen, stimuleren zelfbouw",
+          "linksRechts": 1,
+          "progressiefConservatief": 4
         },
         "zorg": {
           "kleur": "#FFA500",
           "kleur_naam": "Oranje (menselijke maat)",
           "positie": "Menselijke maat - nabije zorg",
-          "quote": "Zorg dichtbij, meer aandacht voor ouderen en chronisch zieken, waardering zorgpersoneel"
+          "quote": "Zorg dichtbij, meer aandacht voor ouderen en chronisch zieken, waardering zorgpersoneel",
+          "linksRechts": 0,
+          "progressiefConservatief": 3
         },
         "migratie": {
           "kleur": "#D2691E",
           "kleur_naam": "Chocoladebruin (streng maar rechtvaardig)",
           "positie": "Streng maar rechtvaardig",
-          "quote": "Strenge grensbewaking, opvang in de regio, integratie verplicht"
+          "quote": "Strenge grensbewaking, opvang in de regio, integratie verplicht",
+          "linksRechts": 4,
+          "progressiefConservatief": 6
         },
         "belastingen": {
           "kleur": "#CD853F",
           "kleur_naam": "Zandbruin (gematigd)",
           "positie": "Gematigd - eerlijke verdeling",
-          "quote": "Eerlijke belastingverdeling, lagere lasten op arbeid, bescherming middeninkomens"
+          "quote": "Eerlijke belastingverdeling, lagere lasten op arbeid, bescherming middeninkomens",
+          "linksRechts": 2,
+          "progressiefConservatief": 3
         },
         "samenleving_inclusie": {
           "kleur": "#DEB887",
           "kleur_naam": "Beige (traditioneel)",
           "positie": "Traditioneel - christelijke waarden",
-          "quote": "Respect voor christelijke waarden, bescherming gezin, zondagsrust"
+          "quote": "Respect voor christelijke waarden, bescherming gezin, zondagsrust",
+          "linksRechts": 2,
+          "progressiefConservatief": 6
         },
         "financiering": {
           "kleur": "#BC8F8F",
           "kleur_naam": "Roze-bruin (gematigd bezuinigen)",
           "positie": "Gematigd bezuinigen en investeren",
-          "quote": "Verantwoord financieel beleid, beperkte schuld, investeren in toekomst"
+          "quote": "Verantwoord financieel beleid, beperkte schuld, investeren in toekomst",
+          "linksRechts": 1,
+          "progressiefConservatief": 4
         }
       }
     },
@@ -250,37 +310,49 @@
           "kleur": "#4682B4",
           "kleur_naam": "Staalblauw (marktgericht)",
           "positie": "Marktgericht - minder regels",
-          "quote": "Versnellen woningbouw door minder regels, voorrang voor Nederlanders"
+          "quote": "Versnellen woningbouw door minder regels, voorrang voor Nederlanders",
+          "linksRechts": 5,
+          "progressiefConservatief": 5
         },
         "zorg": {
           "kleur": "#5F9EA0",
           "kleur_naam": "Cadetblauw (pragmatisch)",
           "positie": "Pragmatisch - betaalbare zorg",
-          "quote": "Betaalbare zorg, minder bureaucratie, meer aandacht voor ouderen"
+          "quote": "Betaalbare zorg, minder bureaucratie, meer aandacht voor ouderen",
+          "linksRechts": 4,
+          "progressiefConservatief": 4
         },
         "migratie": {
           "kleur": "#8B0000",
           "kleur_naam": "Donkerrood (zeer restrictief)",
           "positie": "Zeer restrictief - grenzen dicht",
-          "quote": "Asielstop, grenzen dicht, strenge handhaving, uitzetten illegalen"
+          "quote": "Asielstop, grenzen dicht, strenge handhaving, uitzetten illegalen",
+          "linksRechts": 7,
+          "progressiefConservatief": 7
         },
         "belastingen": {
           "kleur": "#4169E1",
           "kleur_naam": "Koningsblauw (lastenverlichting)",
           "positie": "Lastenverlichting - lage belastingen",
-          "quote": "Lagere belastingen voor burgers en bedrijven, geen vermogensbelasting"
+          "quote": "Lagere belastingen voor burgers en bedrijven, geen vermogensbelasting",
+          "linksRechts": 6,
+          "progressiefConservatief": 3
         },
         "samenleving_inclusie": {
           "kleur": "#191970",
           "kleur_naam": "Middernachtblauw (conservatief)",
           "positie": "Conservatief - Nederlandse identiteit",
-          "quote": "Bescherming Nederlandse identiteit, stop met identiteitspolitiek"
+          "quote": "Bescherming Nederlandse identiteit, stop met identiteitspolitiek",
+          "linksRechts": 6,
+          "progressiefConservatief": 7
         },
         "financiering": {
           "kleur": "#483D8B",
           "kleur_naam": "Donkerblauw (bezuinigen)",
           "positie": "Bezuinigen op ontwikkelingshulp",
-          "quote": "Bezuinigen op ontwikkelingshulp en klimaat, meer geld voor Nederland"
+          "quote": "Bezuinigen op ontwikkelingshulp en klimaat, meer geld voor Nederland",
+          "linksRechts": 5,
+          "progressiefConservatief": 5
         }
       }
     },
@@ -293,37 +365,49 @@
           "kleur": "#8B4513",
           "kleur_naam": "Zadelbruin (platteland)",
           "positie": "Plattelandsgericht - bouwen in dorpen",
-          "quote": "Meer woningen in dorpen en kleine steden, bescherming landelijk gebied"
+          "quote": "Meer woningen in dorpen en kleine steden, bescherming landelijk gebied",
+          "linksRechts": 2,
+          "progressiefConservatief": 3
         },
         "zorg": {
           "kleur": "#A0522D",
           "kleur_naam": "Sienna (nabije zorg)",
           "positie": "Nabije zorg op het platteland",
-          "quote": "Zorg dichtbij ook op het platteland, behoud kleine ziekenhuizen"
+          "quote": "Zorg dichtbij ook op het platteland, behoud kleine ziekenhuizen",
+          "linksRechts": 0,
+          "progressiefConservatief": 2
         },
         "migratie": {
           "kleur": "#D2691E",
           "kleur_naam": "Chocoladebruin (streng)",
           "positie": "Streng - minder asielzoekers",
-          "quote": "Minder asielzoekers, geen azc's in kleine dorpen, strenge handhaving"
+          "quote": "Minder asielzoekers, geen azc's in kleine dorpen, strenge handhaving",
+          "linksRechts": 4,
+          "progressiefConservatief": 5
         },
         "belastingen": {
           "kleur": "#CD853F",
           "kleur_naam": "Zandbruin (lastenverlichting)",
           "positie": "Lastenverlichting voor burgers",
-          "quote": "Lagere belastingen voor burgers en ondernemers, afschaffen CO2-heffing"
+          "quote": "Lagere belastingen voor burgers en ondernemers, afschaffen CO2-heffing",
+          "linksRechts": 1,
+          "progressiefConservatief": 2
         },
         "samenleving_inclusie": {
           "kleur": "#DEB887",
           "kleur_naam": "Beige (traditioneel)",
           "positie": "Traditioneel - plattelandswaarden",
-          "quote": "Respect voor plattelandscultuur en tradities, minder overheidsbemoeienis"
+          "quote": "Respect voor plattelandscultuur en tradities, minder overheidsbemoeienis",
+          "linksRechts": 3,
+          "progressiefConservatief": 5
         },
         "financiering": {
           "kleur": "#BC8F8F",
           "kleur_naam": "Roze-bruin (bezuinigen op klimaat)",
           "positie": "Bezuinigen op klimaatbeleid",
-          "quote": "Bezuinigen op klimaatmaatregelen, meer geld voor platteland en landbouw"
+          "quote": "Bezuinigen op klimaatmaatregelen, meer geld voor platteland en landbouw",
+          "linksRechts": 2,
+          "progressiefConservatief": 3
         }
       }
     },
@@ -336,37 +420,49 @@
           "kleur": "#DC143C",
           "kleur_naam": "Rood (sociaal)",
           "positie": "Sociaal - betaalbare huur",
-          "quote": "Huurprijsbevriezing, meer sociale huurwoningen, bescherming huurders"
+          "quote": "Huurprijsbevriezing, meer sociale huurwoningen, bescherming huurders",
+          "linksRechts": -5,
+          "progressiefConservatief": -4
         },
         "zorg": {
           "kleur": "#FF1493",
           "kleur_naam": "Roze (toegankelijk)",
           "positie": "Toegankelijke zorg voor iedereen",
-          "quote": "Afschaffen eigen risico, betaalbare zorg voor iedereen, meer zorgpersoneel"
+          "quote": "Afschaffen eigen risico, betaalbare zorg voor iedereen, meer zorgpersoneel",
+          "linksRechts": -6,
+          "progressiefConservatief": -2
         },
         "migratie": {
           "kleur": "#FFD700",
           "kleur_naam": "Goud (humaan)",
           "positie": "Humaan - vluchtelingen welkom",
-          "quote": "Humaan asielbeleid, gezinshereniging, betere integratie"
+          "quote": "Humaan asielbeleid, gezinshereniging, betere integratie",
+          "linksRechts": -7,
+          "progressiefConservatief": -6
         },
         "belastingen": {
           "kleur": "#8B0000",
           "kleur_naam": "Donkerrood (progressief)",
           "positie": "Progressief - rijken belasten",
-          "quote": "Hogere belastingen voor rijken, lagere lasten voor lage inkomens"
+          "quote": "Hogere belastingen voor rijken, lagere lasten voor lage inkomens",
+          "linksRechts": -5,
+          "progressiefConservatief": -3
         },
         "samenleving_inclusie": {
           "kleur": "#00FF00",
           "kleur_naam": "Groen (zeer progressief)",
           "positie": "Zeer progressief - antiracisme",
-          "quote": "Actief antiracisme beleid, gelijke kansen voor minderheden, diversiteit"
+          "quote": "Actief antiracisme beleid, gelijke kansen voor minderheden, diversiteit",
+          "linksRechts": -6,
+          "progressiefConservatief": -7
         },
         "financiering": {
           "kleur": "#228B22",
           "kleur_naam": "Bosgroen (sociale investeringen)",
           "positie": "Investeren in sociale voorzieningen",
-          "quote": "Investeren in onderwijs, zorg en wijken, betalen door rijken te belasten"
+          "quote": "Investeren in onderwijs, zorg en wijken, betalen door rijken te belasten",
+          "linksRechts": -5,
+          "progressiefConservatief": -4
         }
       }
     },
@@ -379,37 +475,49 @@
           "kleur": "#000080",
           "kleur_naam": "Marineblauw (traditioneel)",
           "positie": "Traditioneel - gezinswoningen",
-          "quote": "Betaalbare gezinswoningen, bescherming huurders, stimuleren eigenwoningbezit"
+          "quote": "Betaalbare gezinswoningen, bescherming huurders, stimuleren eigenwoningbezit",
+          "linksRechts": 1,
+          "progressiefConservatief": 8
         },
         "zorg": {
           "kleur": "#4169E1",
           "kleur_naam": "Koningsblauw (christelijk)",
           "positie": "Christelijk - menselijke maat",
-          "quote": "Zorg met aandacht voor menselijke waardigheid, bescherming kwetsbaren"
+          "quote": "Zorg met aandacht voor menselijke waardigheid, bescherming kwetsbaren",
+          "linksRechts": 0,
+          "progressiefConservatief": 7
         },
         "migratie": {
           "kleur": "#8B4513",
           "kleur_naam": "Zadelbruin (streng)",
           "positie": "Streng - beperkte opvang",
-          "quote": "Streng asielbeleid, opvang in de regio, bescherming christelijke waarden"
+          "quote": "Streng asielbeleid, opvang in de regio, bescherming christelijke waarden",
+          "linksRechts": 5,
+          "progressiefConservatief": 8
         },
         "belastingen": {
           "kleur": "#483D8B",
           "kleur_naam": "Donkerblauw (gematigd)",
           "positie": "Gematigd - eerlijke verdeling",
-          "quote": "Eerlijke belastingverdeling, bescherming gezinnen, geen schulden"
+          "quote": "Eerlijke belastingverdeling, bescherming gezinnen, geen schulden",
+          "linksRechts": 2,
+          "progressiefConservatief": 6
         },
         "samenleving_inclusie": {
           "kleur": "#191970",
           "kleur_naam": "Middernachtblauw (zeer conservatief)",
           "positie": "Zeer conservatief - bijbelse normen",
-          "quote": "Bescherming bijbelse normen en waarden, zondagsrust, traditioneel gezin"
+          "quote": "Bescherming bijbelse normen en waarden, zondagsrust, traditioneel gezin",
+          "linksRechts": 4,
+          "progressiefConservatief": 10
         },
         "financiering": {
           "kleur": "#000080",
           "kleur_naam": "Marineblauw (verantwoord)",
           "positie": "Verantwoord - geen schulden",
-          "quote": "Verantwoord financieel beleid, geen schulden voor volgende generatie"
+          "quote": "Verantwoord financieel beleid, geen schulden voor volgende generatie",
+          "linksRechts": 1,
+          "progressiefConservatief": 7
         }
       }
     },
@@ -422,37 +530,49 @@
           "kleur": "#DC143C",
           "kleur_naam": "Rood (zeer sociaal)",
           "positie": "Zeer sociaal - massale woningbouw",
-          "quote": "Massale bouw sociale huurwoningen, huurprijsverlaging, hardhandig tegen huisjesmelkers"
+          "quote": "Massale bouw sociale huurwoningen, huurprijsverlaging, hardhandig tegen huisjesmelkers",
+          "linksRechts": -8,
+          "progressiefConservatief": -2
         },
         "zorg": {
           "kleur": "#8B0000",
           "kleur_naam": "Donkerrood (publieke zorg)",
           "positie": "Publieke zorg - afschaffen marktwerking",
-          "quote": "Zorg volledig uit de markt, afschaffen eigen risico, meer geld voor zorgpersoneel"
+          "quote": "Zorg volledig uit de markt, afschaffen eigen risico, meer geld voor zorgpersoneel",
+          "linksRechts": -9,
+          "progressiefConservatief": -1
         },
         "migratie": {
           "kleur": "#FF8C00",
           "kleur_naam": "Oranje (gematigd)",
           "positie": "Gematigd - humaan maar realistisch",
-          "quote": "Humaan asielbeleid, maar ook grenzen aan opvang, goede integratie"
+          "quote": "Humaan asielbeleid, maar ook grenzen aan opvang, goede integratie",
+          "linksRechts": -4,
+          "progressiefConservatief": 2
         },
         "belastingen": {
           "kleur": "#8B0000",
           "kleur_naam": "Donkerrood (zeer progressief)",
           "positie": "Zeer progressief - rijken zwaar belasten",
-          "quote": "Miljonairsbelasting, vermogensbelasting, hogere belasting op winst"
+          "quote": "Miljonairsbelasting, vermogensbelasting, hogere belasting op winst",
+          "linksRechts": -9,
+          "progressiefConservatief": -2
         },
         "samenleving_inclusie": {
           "kleur": "#FF1493",
           "kleur_naam": "Roze (progressief)",
           "positie": "Progressief - gelijke rechten",
-          "quote": "Gelijke rechten voor iedereen, bestrijden discriminatie, sociale gelijkheid"
+          "quote": "Gelijke rechten voor iedereen, bestrijden discriminatie, sociale gelijkheid",
+          "linksRechts": -6,
+          "progressiefConservatief": -4
         },
         "financiering": {
           "kleur": "#DC143C",
           "kleur_naam": "Rood (investeren in sociaal)",
           "positie": "Investeren in sociale voorzieningen",
-          "quote": "Grote investeringen in zorg, onderwijs en sociale zekerheid, betalen door rijken"
+          "quote": "Grote investeringen in zorg, onderwijs en sociale zekerheid, betalen door rijken",
+          "linksRechts": -8,
+          "progressiefConservatief": -3
         }
       }
     },
@@ -465,37 +585,49 @@
           "kleur": "#228B22",
           "kleur_naam": "Bosgroen (duurzaam)",
           "positie": "Duurzaam - groene woningen",
-          "quote": "Duurzame woningbouw, groene steden, bescherming natuur bij bouwen"
+          "quote": "Duurzame woningbouw, groene steden, bescherming natuur bij bouwen",
+          "linksRechts": -5,
+          "progressiefConservatief": -7
         },
         "zorg": {
           "kleur": "#32CD32",
           "kleur_naam": "Limoengroen (preventie)",
           "positie": "Preventie - gezonde leefomgeving",
-          "quote": "Preventie door gezonde leefomgeving, minder vlees, schone lucht"
+          "quote": "Preventie door gezonde leefomgeving, minder vlees, schone lucht",
+          "linksRechts": -6,
+          "progressiefConservatief": -5
         },
         "migratie": {
           "kleur": "#FFD700",
           "kleur_naam": "Goud (humaan)",
           "positie": "Humaan - klimaatvluchtelingen",
-          "quote": "Opvang klimaatvluchtelingen, humaan asielbeleid, internationale solidariteit"
+          "quote": "Opvang klimaatvluchtelingen, humaan asielbeleid, internationale solidariteit",
+          "linksRechts": -5,
+          "progressiefConservatief": -6
         },
         "belastingen": {
           "kleur": "#006400",
           "kleur_naam": "Donkergroen (groen progressief)",
           "positie": "Groen progressief - vervuiler betaalt",
-          "quote": "Vervuiler betaalt, belasting op vlees en vervuiling, lagere lasten op arbeid"
+          "quote": "Vervuiler betaalt, belasting op vlees en vervuiling, lagere lasten op arbeid",
+          "linksRechts": -6,
+          "progressiefConservatief": -5
         },
         "samenleving_inclusie": {
           "kleur": "#00FF00",
           "kleur_naam": "Groen (zeer progressief)",
           "positie": "Zeer progressief - rechten voor allen",
-          "quote": "Gelijke rechten voor mens en dier, antiracisme, bescherming kwetsbaren"
+          "quote": "Gelijke rechten voor mens en dier, antiracisme, bescherming kwetsbaren",
+          "linksRechts": -6,
+          "progressiefConservatief": -8
         },
         "financiering": {
           "kleur": "#228B22",
           "kleur_naam": "Bosgroen (groene investeringen)",
           "positie": "Investeren in klimaat en natuur",
-          "quote": "Grote investeringen in klimaat, natuur en dierenwelzijn"
+          "quote": "Grote investeringen in klimaat, natuur en dierenwelzijn",
+          "linksRechts": -5,
+          "progressiefConservatief": -6
         }
       }
     },
@@ -508,37 +640,49 @@
           "kleur": "#FF8C00",
           "kleur_naam": "Oranje (sociaal)",
           "positie": "Sociaal - betaalbaar voor gezinnen",
-          "quote": "Betaalbare woningen voor gezinnen, bescherming huurders, stimuleren eigenwoningbezit"
+          "quote": "Betaalbare woningen voor gezinnen, bescherming huurders, stimuleren eigenwoningbezit",
+          "linksRechts": -1,
+          "progressiefConservatief": 5
         },
         "zorg": {
           "kleur": "#FFA500",
           "kleur_naam": "Oranje (menselijke maat)",
           "positie": "Menselijke maat - nabije zorg",
-          "quote": "Zorg dichtbij, aandacht voor kwetsbaren, waardering zorgpersoneel"
+          "quote": "Zorg dichtbij, aandacht voor kwetsbaren, waardering zorgpersoneel",
+          "linksRechts": -2,
+          "progressiefConservatief": 4
         },
         "migratie": {
           "kleur": "#FFD700",
           "kleur_naam": "Goud (humaan maar realistisch)",
           "positie": "Humaan maar realistisch",
-          "quote": "Humaan asielbeleid, opvang in de regio, goede integratie verplicht"
+          "quote": "Humaan asielbeleid, opvang in de regio, goede integratie verplicht",
+          "linksRechts": 2,
+          "progressiefConservatief": 6
         },
         "belastingen": {
           "kleur": "#CD853F",
           "kleur_naam": "Zandbruin (gematigd)",
           "positie": "Gematigd - eerlijke verdeling",
-          "quote": "Eerlijke belastingverdeling, bescherming gezinnen en lage inkomens"
+          "quote": "Eerlijke belastingverdeling, bescherming gezinnen en lage inkomens",
+          "linksRechts": 0,
+          "progressiefConservatief": 4
         },
         "samenleving_inclusie": {
           "kleur": "#DEB887",
           "kleur_naam": "Beige (christelijk)",
           "positie": "Christelijk - naastenliefde",
-          "quote": "Naastenliefde, bescherming kwetsbaren, respect voor christelijke waarden"
+          "quote": "Naastenliefde, bescherming kwetsbaren, respect voor christelijke waarden",
+          "linksRechts": 1,
+          "progressiefConservatief": 8
         },
         "financiering": {
           "kleur": "#BC8F8F",
           "kleur_naam": "Roze-bruin (verantwoord)",
           "positie": "Verantwoord - investeren en bezuinigen",
-          "quote": "Verantwoord financieel beleid, investeren in toekomst, beperkte schuld"
+          "quote": "Verantwoord financieel beleid, investeren in toekomst, beperkte schuld",
+          "linksRechts": 0,
+          "progressiefConservatief": 5
         }
       }
     },
@@ -551,37 +695,49 @@
           "kleur": "#9370DB",
           "kleur_naam": "Paars (seniorengericht)",
           "positie": "Seniorengericht - levensloopbestendige woningen",
-          "quote": "Meer levensloopbestendige woningen, betaalbare huur voor ouderen"
+          "quote": "Meer levensloopbestendige woningen, betaalbare huur voor ouderen",
+          "linksRechts": -3,
+          "progressiefConservatief": 2
         },
         "zorg": {
           "kleur": "#8B008B",
           "kleur_naam": "Donkerpaars (ouderenzorg)",
           "positie": "Focus op ouderenzorg",
-          "quote": "Meer geld voor ouderenzorg, afschaffen eigen risico, betere thuiszorg"
+          "quote": "Meer geld voor ouderenzorg, afschaffen eigen risico, betere thuiszorg",
+          "linksRechts": -4,
+          "progressiefConservatief": 3
         },
         "migratie": {
           "kleur": "#BA55D3",
           "kleur_naam": "Orchidee (gematigd)",
           "positie": "Gematigd - beperkte opvang",
-          "quote": "Beperkte asielopvang, eerst zorgen voor Nederlandse ouderen"
+          "quote": "Beperkte asielopvang, eerst zorgen voor Nederlandse ouderen",
+          "linksRechts": 1,
+          "progressiefConservatief": 4
         },
         "belastingen": {
           "kleur": "#9932CC",
           "kleur_naam": "Donkerorchidee (lastenverlichting)",
           "positie": "Lastenverlichting voor ouderen",
-          "quote": "Lagere belastingen voor gepensioneerden, bescherming AOW"
+          "quote": "Lagere belastingen voor gepensioneerden, bescherming AOW",
+          "linksRechts": -2,
+          "progressiefConservatief": 2
         },
         "samenleving_inclusie": {
           "kleur": "#DDA0DD",
           "kleur_naam": "Pruim (gematigd)",
           "positie": "Gematigd - respect voor ouderen",
-          "quote": "Meer respect voor ouderen, bestrijden eenzaamheid, participatie"
+          "quote": "Meer respect voor ouderen, bestrijden eenzaamheid, participatie",
+          "linksRechts": 0,
+          "progressiefConservatief": 3
         },
         "financiering": {
           "kleur": "#8B008B",
           "kleur_naam": "Donkerpaars (investeren in ouderen)",
           "positie": "Investeren in ouderenzorg",
-          "quote": "Meer geld voor ouderenzorg en pensioenen, betalen door vermogensbelasting"
+          "quote": "Meer geld voor ouderenzorg en pensioenen, betalen door vermogensbelasting",
+          "linksRechts": -1,
+          "progressiefConservatief": 2
         }
       }
     },
@@ -594,37 +750,49 @@
           "kleur": "#9370DB",
           "kleur_naam": "Paars (progressief Europees)",
           "positie": "Progressief Europees - duurzaam bouwen",
-          "quote": "Duurzame woningbouw, Europese samenwerking, betaalbaar voor jongeren"
+          "quote": "Duurzame woningbouw, Europese samenwerking, betaalbaar voor jongeren",
+          "linksRechts": -4,
+          "progressiefConservatief": -7
         },
         "zorg": {
           "kleur": "#8A2BE2",
           "kleur_naam": "Blauwpaars (modern)",
           "positie": "Modern - digitalisering en preventie",
-          "quote": "Digitalisering zorg, preventie, Europese samenwerking in gezondheidszorg"
+          "quote": "Digitalisering zorg, preventie, Europese samenwerking in gezondheidszorg",
+          "linksRechts": -3,
+          "progressiefConservatief": -6
         },
         "migratie": {
           "kleur": "#FFD700",
           "kleur_naam": "Goud (Europees humaan)",
           "positie": "Europees humaan - eerlijke verdeling",
-          "quote": "Europese asielbeleid, eerlijke verdeling vluchtelingen, arbeidsmigratie"
+          "quote": "Europese asielbeleid, eerlijke verdeling vluchtelingen, arbeidsmigratie",
+          "linksRechts": -5,
+          "progressiefConservatief": -8
         },
         "belastingen": {
           "kleur": "#9370DB",
           "kleur_naam": "Paars (progressief)",
           "positie": "Progressief - vermogensbelasting",
-          "quote": "Vermogensbelasting, lagere lasten op arbeid, Europese belastingharmonisatie"
+          "quote": "Vermogensbelasting, lagere lasten op arbeid, Europese belastingharmonisatie",
+          "linksRechts": -4,
+          "progressiefConservatief": -5
         },
         "samenleving_inclusie": {
           "kleur": "#FF1493",
           "kleur_naam": "Roze (zeer progressief)",
           "positie": "Zeer progressief - Europese waarden",
-          "quote": "Volledige gelijkheid LGBTQ+, antiracisme, Europese mensenrechten"
+          "quote": "Volledige gelijkheid LGBTQ+, antiracisme, Europese mensenrechten",
+          "linksRechts": -5,
+          "progressiefConservatief": -9
         },
         "financiering": {
           "kleur": "#4B0082",
           "kleur_naam": "Indigo (Europese investeringen)",
           "positie": "Europese investeringen in klimaat",
-          "quote": "Grote Europese investeringen in klimaat, onderwijs en innovatie"
+          "quote": "Grote Europese investeringen in klimaat, onderwijs en innovatie",
+          "linksRechts": -4,
+          "progressiefConservatief": -6
         }
       }
     },
@@ -680,37 +848,49 @@
           "kleur": "#8B4513",
           "kleur_naam": "Zadelbruin (nationalistisch)",
           "positie": "Nationalistisch - Nederlanders eerst",
-          "quote": "Voorrang Nederlanders bij woningen, stop met asielopvang in woningen"
+          "quote": "Voorrang Nederlanders bij woningen, stop met asielopvang in woningen",
+          "linksRechts": 4,
+          "progressiefConservatief": 6
         },
         "zorg": {
           "kleur": "#A0522D",
           "kleur_naam": "Sienna (traditioneel)",
           "positie": "Traditioneel - Nederlandse zorg",
-          "quote": "Nederlandse zorg voor Nederlanders, minder bureaucratie, eigen verantwoordelijkheid"
+          "quote": "Nederlandse zorg voor Nederlanders, minder bureaucratie, eigen verantwoordelijkheid",
+          "linksRechts": 3,
+          "progressiefConservatief": 5
         },
         "migratie": {
           "kleur": "#8B0000",
           "kleur_naam": "Donkerrood (zeer restrictief)",
           "positie": "Zeer restrictief - grenzen dicht",
-          "quote": "Asielstop, grenzen dicht, massale uitzetting illegalen, Nexit"
+          "quote": "Asielstop, grenzen dicht, massale uitzetting illegalen, Nexit",
+          "linksRechts": 9,
+          "progressiefConservatief": 8
         },
         "belastingen": {
           "kleur": "#4169E1",
           "kleur_naam": "Koningsblauw (lastenverlichting)",
           "positie": "Lastenverlichting - lage belastingen",
-          "quote": "Lagere belastingen, afschaffen klimaatbelasting, geen vermogensbelasting"
+          "quote": "Lagere belastingen, afschaffen klimaatbelasting, geen vermogensbelasting",
+          "linksRechts": 5,
+          "progressiefConservatief": 4
         },
         "samenleving_inclusie": {
           "kleur": "#191970",
           "kleur_naam": "Middernachtblauw (zeer conservatief)",
           "positie": "Zeer conservatief - Nederlandse identiteit",
-          "quote": "Bescherming Nederlandse identiteit en cultuur, stop met woke-ideologie"
+          "quote": "Bescherming Nederlandse identiteit en cultuur, stop met woke-ideologie",
+          "linksRechts": 8,
+          "progressiefConservatief": 9
         },
         "financiering": {
           "kleur": "#8B4513",
           "kleur_naam": "Zadelbruin (bezuinigen op EU)",
           "positie": "Bezuinigen op EU en klimaat",
-          "quote": "Nexit, bezuinigen op klimaat en ontwikkelingshulp, meer geld voor Nederland"
+          "quote": "Nexit, bezuinigen op klimaat en ontwikkelingshulp, meer geld voor Nederland",
+          "linksRechts": 6,
+          "progressiefConservatief": 6
         }
       }
     }

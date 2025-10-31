@@ -26,3 +26,10 @@
 - [x] Voeg legenda toe voor kleurenbetekenis
 - [x] Vul zetels van links naar rechts in de kamer
 - [x] Toon aantal gevulde zetels van het totaal
+
+## Kleurenschema verbetering
+
+- [x] Implementeer 2D kleurenschema (Links-Rechts × Progressief-Conservatief)
+- [x] Ken scores toe aan partijen per thema op beide assen
+- [x] Automatische kleurberekening op basis van politieke positie
+- [x] Voeg uitgebreide legenda toe die de politieke kleur van de kamer uitlegt

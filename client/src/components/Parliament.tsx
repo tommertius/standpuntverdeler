@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { calculatePoliticalColor, calculateCoalitionPosition, describePoliticalPosition, getLegendColor } from '@/lib/colorUtils';
 
 interface Seat {
   x: number;
@@ -63,7 +64,15 @@ export default function Parliament({ selectedParties, partiesData, selectedTheme
     for (const [partyKey, partyData] of sortedParties) {
       const party = partyData as any;
       const numSeats = party.zetels;
-      const color = party.standpunten[selectedTheme]?.kleur || '#999999';
+      const themeStandpunt = party.standpunten[selectedTheme];
+      
+      if (!themeStandpunt) continue;
+      
+      // Bereken kleur op basis van politieke positie
+      const color = calculatePoliticalColor(
+        themeStandpunt.linksRechts || 0,
+        themeStandpunt.progressiefConservatief || 0
+      );
       
       for (let i = 0; i < numSeats && currentIndex < sortedSeats.length; i++) {
         const seatToAssign = sortedSeats[currentIndex];
@@ -105,6 +114,26 @@ export default function Parliament({ selectedParties, partiesData, selectedTheme
     
     return Array.from(uniqueParties.values()).sort((a, b) => b.seats - a.seats);
   }, [assignedSeats]);
+
+  // Bereken coalitie positie
+  const coalitionPosition = useMemo(() => {
+    if (!partiesData || !partiesData.partijen) return null;
+    
+    const selectedPartiesData = Object.entries(partiesData.partijen)
+      .filter(([key]) => selectedParties[key])
+      .map(([_, party]: [string, any]) => {
+        const themeStandpunt = party.standpunten[selectedTheme];
+        return {
+          linksRechts: themeStandpunt?.linksRechts || 0,
+          progressiefConservatief: themeStandpunt?.progressiefConservatief || 0,
+          zetels: party.zetels
+        };
+      });
+    
+    if (selectedPartiesData.length === 0) return null;
+    
+    return calculateCoalitionPosition(selectedPartiesData);
+  }, [selectedParties, partiesData, selectedTheme]);
 
   return (
     <div className="w-full space-y-4">
@@ -154,27 +183,82 @@ export default function Parliament({ selectedParties, partiesData, selectedTheme
         </svg>
       </div>
 
-      {/* Legenda */}
+      {/* Legenda en uitleg */}
       {legend.length > 0 && (
-        <div className="border-t pt-4">
-          <h4 className="text-sm font-semibold mb-3">Legenda</h4>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-            {legend.map((item) => (
-              <div key={item.name} className="flex items-center gap-2">
-                <div
-                  className="w-4 h-4 rounded-full border border-foreground/20 flex-shrink-0"
-                  style={{ backgroundColor: item.color }}
-                />
-                <span className="text-xs">
-                  <span className="font-medium">{item.name}</span>
-                  <span className="text-muted-foreground ml-1">({item.seats})</span>
-                </span>
-              </div>
-            ))}
+        <div className="border-t pt-4 space-y-4">
+          {/* Partijen legenda */}
+          <div>
+            <h4 className="text-sm font-semibold mb-3">Geselecteerde partijen</h4>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+              {legend.map((item) => (
+                <div key={item.name} className="flex items-center gap-2">
+                  <div
+                    className="w-4 h-4 rounded-full border border-foreground/20 flex-shrink-0"
+                    style={{ backgroundColor: item.color }}
+                  />
+                  <span className="text-xs">
+                    <span className="font-medium">{item.name}</span>
+                    <span className="text-muted-foreground ml-1">({item.seats})</span>
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
-          <p className="text-xs text-muted-foreground mt-3">
-            Kleuren gebaseerd op standpunt over: <strong>{partiesData?.themas[selectedTheme]?.naam}</strong>
-          </p>
+
+          {/* Kleurenschema uitleg */}
+          <div className="bg-muted/30 rounded-lg p-4 space-y-3">
+            <h4 className="text-sm font-semibold">Wat betekenen deze kleuren?</h4>
+            <p className="text-xs text-muted-foreground">
+              De kleuren tonen de politieke positie van elke partij op het thema <strong>{partiesData?.themas[selectedTheme]?.naam}</strong>
+            </p>
+            
+            <div className="grid grid-cols-2 gap-3 text-xs">
+              <div>
+                <p className="font-medium mb-2">Links ↔ Rechts</p>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getLegendColor('links', 'licht') }} />
+                    <span>Links (sociaal, herverdeling)</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getLegendColor('centrum', 'licht') }} />
+                    <span>Centrum (gematigd)</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getLegendColor('rechts', 'licht') }} />
+                    <span>Rechts (liberaal, markt)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <p className="font-medium mb-2">Progressief ↔ Conservatief</p>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getLegendColor('centrum', 'licht') }} />
+                    <span>Progressief (lichte kleuren)</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getLegendColor('centrum', 'donker') }} />
+                    <span>Conservatief (donkere kleuren)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Coalitie samenvatting */}
+            {coalitionPosition && (
+              <div className="pt-3 border-t border-border/50">
+                <p className="text-sm">
+                  <span className="font-semibold">Deze coalitie is: </span>
+                  <span className="text-foreground">
+                    {describePoliticalPosition(coalitionPosition.linksRechts, coalitionPosition.progressiefConservatief)}
+                  </span>
+                  <span className="text-muted-foreground"> op het thema {partiesData?.themas[selectedTheme]?.naam.toLowerCase()}</span>
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       )}
     </div>
