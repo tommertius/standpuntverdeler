@@ -20,15 +20,24 @@ export function calculatePoliticalColor(
   const lr = (linksRechts + 10) / 20; // 0 = links, 1 = rechts
   const pc = (progressiefConservatief + 10) / 20; // 0 = progressief, 1 = conservatief
   
-  // Bereken helderheid op basis van progressief-conservatief
-  // Progressief = lichter/verzadigder, Conservatief = donkerder
-  const lightness = 65 - (pc * 30); // 65% (progressief) tot 35% (conservatief)
-  const saturation = 85 - (pc * 30); // 85% (progressief) tot 55% (conservatief)
-  
-  // Bereken hue op basis van links-rechts
-  // Groen (120°) → Rood (0°) → Paars (300°) → Blauw (240°)
+  // Bereken hue en saturation op basis van links-rechts
+  // Extreem-links → Zeer links → Links → Centrum → Rechts → Zeer rechts → Extreem-rechts
   let hue: number;
-  if (lr < 0.33) {
+  let extremeAdjustment = 0;
+  
+  // Check voor extreme posities (buiten -8 tot +8 range)
+  const isExtremeLeft = linksRechts < -8;
+  const isExtremeRight = linksRechts > 8;
+  
+  if (isExtremeLeft) {
+    // Extreem-links: donkergroen (gebruik lagere lightness)
+    hue = 140;
+    extremeAdjustment = -20; // Donkerder
+  } else if (isExtremeRight) {
+    // Extreem-rechts: zwart/donkergrijs (gebruik zeer lage lightness)
+    hue = 0;
+    extremeAdjustment = -35; // Veel donkerder, bijna zwart
+  } else if (lr < 0.33) {
     // Zeer links: groen (120°) naar rood (0°)
     hue = 120 - (lr * 3 * 120);
   } else if (lr < 0.67) {
@@ -38,6 +47,14 @@ export function calculatePoliticalColor(
     // Rechts: paars (300°) naar blauw (240°)
     hue = 300 - ((lr - 0.67) * 3 * 60);
   }
+  
+  // Bereken helderheid op basis van progressief-conservatief
+  // Progressief = lichter/verzadigder, Conservatief = donkerder
+  let lightness = 65 - (pc * 30); // 65% (progressief) tot 35% (conservatief)
+  const saturation = 85 - (pc * 30); // 85% (progressief) tot 55% (conservatief)
+  
+  // Pas lightness aan voor extreme posities
+  lightness += extremeAdjustment;
   
   return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 }
@@ -71,11 +88,13 @@ export function describePoliticalPosition(
   progressiefConservatief: number
 ): string {
   let lrLabel = '';
-  if (linksRechts < -5) lrLabel = 'zeer links';
+  if (linksRechts < -8) lrLabel = 'extreem-links';
+  else if (linksRechts < -5) lrLabel = 'zeer links';
   else if (linksRechts < -2) lrLabel = 'links';
   else if (linksRechts < 2) lrLabel = 'centrum';
   else if (linksRechts < 5) lrLabel = 'rechts';
-  else lrLabel = 'zeer rechts';
+  else if (linksRechts < 8) lrLabel = 'zeer rechts';
+  else lrLabel = 'extreem-rechts';
   
   let pcLabel = '';
   if (progressiefConservatief < -5) pcLabel = 'zeer progressief';

@@ -86,7 +86,7 @@ export default function Home() {
                       Elke partij krijgt per thema een kleur op basis van twee politieke assen:
                     </p>
                     <ul className="list-disc list-inside text-muted-foreground space-y-1 ml-2">
-                      <li><strong>Links-Rechts as:</strong> Van zeer links (groen) via links (rood) en centrum (paars) naar rechts (blauw)</li>
+                      <li><strong>Links-Rechts as:</strong> Van extreem-links (donkergroen) via zeer links (groen), links (rood), centrum (paars), rechts (blauw), zeer rechts (donkerblauw) naar extreem-rechts (zwart/grijs)</li>
                       <li><strong>Progressief-Conservatief as:</strong> Progressieve standpunten krijgen lichtere kleuren, conservatieve standpunten donkerdere kleuren</li>
                     </ul>
                   </section>
@@ -98,9 +98,11 @@ export default function Home() {
                       en CPB-doorrekening. Elke partij krijgt een score van -10 tot +10 op beide assen, waarbij:
                     </p>
                     <ul className="list-disc list-inside text-muted-foreground space-y-1 ml-2 mt-2">
-                      <li>-10 = zeer links / zeer progressief</li>
+                      <li>-10 tot -8 = extreem-links</li>
+                      <li>-8 tot -5 = zeer links / zeer progressief</li>
                       <li>0 = centrum / gematigd</li>
-                      <li>+10 = zeer rechts / zeer conservatief</li>
+                      <li>+5 tot +8 = zeer rechts / zeer conservatief</li>
+                      <li>+8 tot +10 = extreem-rechts</li>
                     </ul>
                   </section>
 
@@ -118,6 +120,19 @@ export default function Home() {
                     <p className="text-muted-foreground">
                       De weergegeven quotes zijn directe citaten of samenvattingen uit de verkiezingsprogramma's van 
                       de partijen, geselecteerd om hun kernstandpunt op het betreffende thema weer te geven.
+                    </p>
+                  </section>
+
+                  <section>
+                    <h3 className="font-semibold mb-2">Extreem-rechts en extreem-links</h3>
+                    <p className="text-muted-foreground">
+                      Partijen die als <strong>extreem-rechts</strong> worden geclassificeerd (zoals PVV en FvD op bepaalde thema's) 
+                      hebben standpunten die als anti-democratisch, autoritair of discriminerend kunnen worden beschouwd. 
+                      Deze classificatie is gebaseerd op analyse van hun verkiezingsprogramma's en publieke uitspraken.
+                    </p>
+                    <p className="text-muted-foreground mt-2">
+                      <strong>Extreem-links</strong> partijen (zoals BIJ1 op bepaalde thema's) hebben zeer radicale hervormingsvoorstellen, 
+                      maar zonder het anti-democratische karakter dat extreem-rechts kenmerkt.
                     </p>
                   </section>
 

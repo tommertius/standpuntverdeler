@@ -50,3 +50,11 @@
 - [x] Maak quotes mooier met minder kleurnadruk
 - [x] Pas popup animatie aan naar scale vanuit midden
 - [x] Maak link bovenin zwart en underlined
+
+## Extreem-rechts/links classificatie
+
+- [x] Uitbreid kleurenschaal met extreem-rechts (zwart/donkergrijs) en extreem-links (donkergroen)
+- [x] Pas scores aan voor PVV, FvD, JA21 op thema's waar zij extreem-rechtse standpunten innemen
+- [x] Pas scores aan voor BIJ1 op thema's waar zij extreem-linkse standpunten innemen
+- [x] Update legenda met uitleg over extreem-rechts/links
+- [x] Voeg disclaimer toe in methodologie popup over anti-democratische standpunten
