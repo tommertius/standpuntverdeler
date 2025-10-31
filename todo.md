@@ -18,3 +18,11 @@
 ## Bugs
 
 (Nog geen bugs gerapporteerd)
+
+## Nieuwe verzoeken
+
+- [x] Maak themaselector als dropdown aan de linkerkant van het tweede vlak
+- [x] Vereenvoudig partijselector tot scrollbare lijst van groot naar klein
+- [x] Voeg legenda toe voor kleurenbetekenis
+- [x] Vul zetels van links naar rechts in de kamer
+- [x] Toon aantal gevulde zetels van het totaal

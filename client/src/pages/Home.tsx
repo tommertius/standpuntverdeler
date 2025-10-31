@@ -35,7 +35,7 @@ export default function Home() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h2 className="text-2xl font-semibold mb-2" style={{ fontFamily: 'var(--font-serif)' }}>
+          <h2 className="text-2xl font-semibold mb-2 font-serif">
             Laden...
           </h2>
           <p className="text-muted-foreground">De standpuntverdeler wordt geladen</p>
@@ -63,44 +63,39 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="container py-8 space-y-8">
-        {/* Thema Selector */}
+        {/* Compact layout: Thema + Visualisatie + Partijen in één card */}
         <Card>
           <CardContent className="pt-6">
-            <ThemeSelector
-              themes={partiesData.themas}
-              selectedTheme={selectedTheme}
-              onSelectTheme={handleSelectTheme}
-            />
-          </CardContent>
-        </Card>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+              {/* Linker kolom: Thema selector en Partij selector */}
+              <div className="lg:col-span-3 space-y-6">
+                <ThemeSelector
+                  themes={partiesData.themas}
+                  selectedTheme={selectedTheme}
+                  onSelectTheme={handleSelectTheme}
+                />
+                
+                <PartySelector
+                  partiesData={partiesData}
+                  selectedParties={selectedParties}
+                  onToggleParty={handleToggleParty}
+                />
+              </div>
 
-        {/* Parliament Visualization */}
-        <Card>
-          <CardContent className="pt-6">
-            <h2 
-              className="text-2xl font-bold text-center mb-6 font-serif"
-            >
-              Tweede Kamer (150 zetels)
-            </h2>
-            <Parliament
-              selectedParties={selectedParties}
-              partiesData={partiesData}
-              selectedTheme={selectedTheme}
-            />
-            <p className="text-center text-sm text-muted-foreground mt-4">
-              Kleuren gebaseerd op thema: <strong>{partiesData.themas[selectedTheme].naam}</strong>
-            </p>
-          </CardContent>
-        </Card>
-
-        {/* Party Selector */}
-        <Card>
-          <CardContent className="pt-6">
-            <PartySelector
-              partiesData={partiesData}
-              selectedParties={selectedParties}
-              onToggleParty={handleToggleParty}
-            />
+              {/* Rechter kolom: Parliament visualisatie */}
+              <div className="lg:col-span-9">
+                <h2 
+                  className="text-2xl font-bold text-center mb-6 font-serif"
+                >
+                  Tweede Kamer (150 zetels)
+                </h2>
+                <Parliament
+                  selectedParties={selectedParties}
+                  partiesData={partiesData}
+                  selectedTheme={selectedTheme}
+                />
+              </div>
+            </div>
           </CardContent>
         </Card>
 

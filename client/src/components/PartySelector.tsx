@@ -1,5 +1,4 @@
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import { Checkbox } from '@/components/ui/checkbox';
 
 interface PartySelectorProps {
   partiesData: any;
@@ -12,34 +11,36 @@ export default function PartySelector({ partiesData, selectedParties, onTogglePa
     return <div>Laden...</div>;
   }
 
-  // Sorteer partijen op aantal zetels
+  // Sorteer partijen op aantal zetels (groot naar klein)
   const sortedParties = Object.entries(partiesData.partijen)
+    .filter(([_, party]: [string, any]) => party.zetels > 0)
     .sort((a: any, b: any) => b[1].zetels - a[1].zetels);
 
   return (
-    <div className="space-y-3">
-      <h3 className="text-lg font-semibold font-serif">
-        Selecteer partijen
-      </h3>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+    <div className="space-y-2">
+      <label className="text-sm font-medium block">Selecteer partijen</label>
+      <div className="border rounded-md p-3 max-h-[400px] overflow-y-auto space-y-2">
         {sortedParties.map(([key, party]: [string, any]) => {
-          if (party.zetels === 0) return null;
-          
           const isSelected = selectedParties[key];
           
           return (
-            <Button
+            <div
               key={key}
-              variant={isSelected ? "default" : "outline"}
-              size="sm"
+              className="flex items-center justify-between p-2 hover:bg-muted/50 rounded cursor-pointer transition-colors"
               onClick={() => onToggleParty(key)}
-              className="flex items-center justify-between gap-2 h-auto py-2 px-3"
             >
-              <span className="font-medium text-sm">{party.naam}</span>
-              <Badge variant="secondary" className="text-xs">
-                {party.zetels}
-              </Badge>
-            </Button>
+              <div className="flex items-center gap-3 flex-1">
+                <Checkbox
+                  checked={isSelected}
+                  onCheckedChange={() => onToggleParty(key)}
+                  onClick={(e) => e.stopPropagation()}
+                />
+                <span className="font-medium text-sm">{party.naam}</span>
+              </div>
+              <span className="text-sm text-muted-foreground font-mono">
+                {party.zetels} zetels
+              </span>
+            </div>
           );
         })}
       </div>
