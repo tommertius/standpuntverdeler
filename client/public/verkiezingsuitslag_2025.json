@@ -1,0 +1,104 @@
+{
+  "verkiezingen": "Tweede Kamer 2025",
+  "bron": "NOS - Prognose ANP",
+  "datum": "2025",
+  "totaal_zetels": 150,
+  "partijen": [
+    {
+      "naam": "PVV",
+      "volledige_naam": "Partij voor de Vrijheid",
+      "zetels": 26,
+      "stemmen": 1748460
+    },
+    {
+      "naam": "D66",
+      "volledige_naam": "Democraten 66",
+      "zetels": 26,
+      "stemmen": 1763615
+    },
+    {
+      "naam": "VVD",
+      "volledige_naam": "Volkspartij voor Vrijheid en Democratie",
+      "zetels": 22,
+      "stemmen": null
+    },
+    {
+      "naam": "GLPVDA",
+      "volledige_naam": "GroenLinks-PvdA",
+      "zetels": 20,
+      "stemmen": null
+    },
+    {
+      "naam": "CDA",
+      "volledige_naam": "Christen-Democratisch Appèl",
+      "zetels": 18,
+      "stemmen": null
+    },
+    {
+      "naam": "JA21",
+      "volledige_naam": "JA21",
+      "zetels": 9,
+      "stemmen": null
+    },
+    {
+      "naam": "FVD",
+      "volledige_naam": "Forum voor Democratie",
+      "zetels": 7,
+      "stemmen": null
+    },
+    {
+      "naam": "BBB",
+      "volledige_naam": "BoerBurgerBeweging",
+      "zetels": 4,
+      "stemmen": null
+    },
+    {
+      "naam": "DENK",
+      "volledige_naam": "DENK",
+      "zetels": 3,
+      "stemmen": null
+    },
+    {
+      "naam": "SGP",
+      "volledige_naam": "Staatkundig Gereformeerde Partij",
+      "zetels": 3,
+      "stemmen": null
+    },
+    {
+      "naam": "SP",
+      "volledige_naam": "Socialistische Partij",
+      "zetels": 3,
+      "stemmen": null
+    },
+    {
+      "naam": "PVDD",
+      "volledige_naam": "Partij voor de Dieren",
+      "zetels": 3,
+      "stemmen": null
+    },
+    {
+      "naam": "CU",
+      "volledige_naam": "ChristenUnie",
+      "zetels": 3,
+      "stemmen": null
+    },
+    {
+      "naam": "50PLUS",
+      "volledige_naam": "50PLUS",
+      "zetels": 2,
+      "stemmen": null
+    },
+    {
+      "naam": "VOLT",
+      "volledige_naam": "Volt Nederland",
+      "zetels": 1,
+      "stemmen": null
+    },
+    {
+      "naam": "NSC",
+      "volledige_naam": "Nieuw Sociaal Contract",
+      "zetels": 0,
+      "stemmen": null
+    }
+  ]
+}
